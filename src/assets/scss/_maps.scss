@@ -1,0 +1,11 @@
+$theme: (
+  'primary': #FFC857,
+  'secondary': #2F4858,
+  'white': #FFF,
+  'off-white': #FCFCFC,
+  'box-shadow': #DDD
+);
+
+@function get-color($key) {
+  @return map-get($theme, $key);
+}

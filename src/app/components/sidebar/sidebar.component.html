@@ -1,0 +1,21 @@
+<div class='sidebar_header'>
+  <div class='estimation-count'>{{ estimatedTotal ? estimatedTotal : 0 }}</div>
+  <h1>Estimated Incidents</h1>
+</div>
+
+<div class='sidebar_content'>
+  <div class="no-incidents" *ngIf="!incidents">
+    <i class="material-icons">beenhere</i>
+    <h2>Search for your location</h2>
+  </div>
+  <ul>
+    <li *ngFor="let incident of incidents" (click)="goToIncident(incident)">
+      <div class='box'>
+        {{ determineTypeOfAccident(incident) }}
+      </div>
+      <div>
+        <p>{{ incident.description }}</p>
+      </div>
+    </li>
+  </ul>
+</div>

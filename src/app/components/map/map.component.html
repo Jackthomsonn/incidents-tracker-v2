@@ -1,0 +1,5 @@
+<div class='search-container'>
+  <input type='text' placeholder="Enter your location here" (click)="focusSearchBar()" [(ngModel)]="searchLocation" />
+  <button (click)="getIncidentsForLocation()"><i class='material-icons'>search</i></button>
+</div>
+<div id='map' [ngClass]="{'map-blur': mapBlur}" (click)="unFocusSearchBar()"></div>

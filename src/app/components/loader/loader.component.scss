@@ -1,0 +1,20 @@
+@import '../../../assets/scss/maps';
+
+:host {
+
+  & > div {
+    width: 100vw;
+    height: 2px;
+    position: absolute;
+    background: get-color('primary');
+    z-index: 1000;
+    animation: grow 2s linear infinite;
+    transform: translateX(-100vw);
+  }
+}
+
+@keyframes grow {
+  to {
+    transform: translateX(100vw);
+  }
+}

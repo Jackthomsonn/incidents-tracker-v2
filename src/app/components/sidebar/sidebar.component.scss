@@ -1,0 +1,123 @@
+@import '../../../assets/scss/maps';
+
+:host {
+  z-index: 1000;
+  position: absolute;
+  background: get-color('white');
+  width: 25vw;
+  height: 100%;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-flow: column wrap;
+  flex: 2;
+  box-shadow: 1px 1px 20px get-color('box-shadow');
+  overflow-y: auto;
+
+  & > .sidebar_header {
+    display: flex;
+    height: 85px;
+    width: 100%;
+    align-items: center;
+
+    & > .estimation-count {
+      background: get-color('primary');
+      height: 85px;
+      width: 85px;
+      max-width: 85px;
+      min-width: 85px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: get-color('white');
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    & > h1 {
+      font-size: 16px;
+      font-weight: 500;
+      color: get-color('secondary');
+      height: 70px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+    }
+  }
+
+  & > .sidebar_content {
+    display: flex;
+    flex-flow: column nowrap;
+
+    & > ul {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+
+      & > li {
+        list-style: none;
+        cursor: pointer;
+        display: flex;
+
+        &:nth-of-type(even) {
+          background: get-color('off-white');
+        }
+
+        & > div {
+          display: flex;
+          justify-content: space-between;
+
+          &.box {
+            background: get-color('secondary');
+            color: get-color('white');
+            max-width: 85px;
+            min-width: 85px;
+            width: 85px;
+            height: 85px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 400;
+            font-size: 12px;
+            border-bottom: 1px solid darken(get-color('secondary'), 6%);
+          }
+
+          &:nth-of-type(2) {
+            display: flex;
+            align-items: center;
+          }
+
+          & > p {
+            padding: 10px;
+            color: get-color('secondary');
+            font-weight: 300;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    & > .no-incidents {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+
+      & > i {
+        color: get-color('secondary');
+        font-size: 56px;
+      }
+
+      & > h2 {
+        color: get-color('secondary');
+        font-weight: 300;
+        margin-top: 18px;
+        font-size: 18px;
+      }
+    }
+  }
+}
